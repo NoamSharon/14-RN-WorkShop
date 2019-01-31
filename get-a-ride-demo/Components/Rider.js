@@ -27,27 +27,6 @@ export default function Rider(props) {
                     </View>
                 </View>
             </TouchableOpacity> 
-            {/* {this.state.showDialog &&
-                    <View style={{ position: 'absolute', bottom: 50, alignSelf: 'center' }}>
-                        <Dialog>
-                            <Dialog.Title><Text>Hello {this.state.dialogName}</Text></Dialog.Title>
-                            <Dialog.Content>
-                                <Image
-                                    style={{ alignSelf:'center', width: 150, height: 150 }}
-                                    source={this.state.dialogSrc}
-                                />
-                            </Dialog.Content>
-                            <Dialog.Actions>
-                                <DialogDefaultActions
-                                    actions={['cancel', 'we\'re good']}
-                                    onActionPress={(data) => {
-                                        this.setState({ showDialog: false });
-                                    }}
-                                />
-                            </Dialog.Actions>
-                        </Dialog>
-                    </View>
-                } */}
         </View>
     );
 }
