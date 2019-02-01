@@ -30,7 +30,7 @@ const AppNavigator = createStackNavigator(
     Push:PushNotPage
   },
   {
-    initialRouteName: 'Push',
+    initialRouteName: 'Login',
   }
 );
 
