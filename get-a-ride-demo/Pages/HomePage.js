@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, FlatList, Image } from 'react-native';
+import { Text, View, FlatList, Image, Dimensions ,TouchableOpacity} from 'react-native';
 import styles from './pageStyle';
 import { Button, ActionButton } from 'react-native-material-ui';
 import Rider from '../Components/Rider';
@@ -64,7 +64,31 @@ export default class HomePage extends React.Component {
             <RiderDialog
               item={this.state.itemClickedObj}
               changeShowDialogState={this.changeShowDialogState} />}
-
+          <View
+              style={{
+                position: 'absolute',
+                bottom: 100, 
+                width: Dimensions.get('window').width - 10,
+                flexDirection: 'row',
+                paddingLeft: 20
+              }}>
+              <TouchableOpacity onPress={() => this.props.navigation.navigate('Elements')}>
+                <View style={{
+                  width: 55,
+                  height: 55,
+                  borderRadius: 40,
+                  justifyContent: 'center',
+                  backgroundColor: 'white' 
+                }}>
+                  <Image
+                    style={{
+                      alignSelf: 'center', width: 25, height: 25,
+                      borderRadius: 50
+                    }}
+                    source={require('../assets/RNElements.png')} />
+                </View>
+              </TouchableOpacity>
+            </View>
           <View
             style={{
               //flex: 1,
@@ -83,7 +107,7 @@ export default class HomePage extends React.Component {
               bottom: 0,
               alignSelf: 'center',
               flexDirection: 'row',
-              padding:50
+              padding: 50
             }}>
             <ActionButton
               icon='notifications'

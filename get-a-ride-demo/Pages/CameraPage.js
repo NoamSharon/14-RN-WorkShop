@@ -12,7 +12,7 @@ export default class CameraPage extends React.Component {
     super(props);
     this.state = {
       hasCameraPermission: null,
-      type: Camera.Constants.Type.front,
+      type: Camera.Constants.Type.back,
       photoUri: 'https://facebook.github.io/react-native/docs/assets/favicon.png',
       uplodedPicUri:{uri:'https://facebook.github.io/react-native/docs/assets/favicon.png'}
     }
